@@ -13,5 +13,13 @@
 
 Route::get('/', function () {
     return view('index');
-    //return Twitter::getUserTimeline(['screen_name' => 'cabralvalen09', 'count' => 20, 'format' => 'json']);
 });
+
+Route::get('/obtener_tweets', 'TwitterController@obtenerTweets')->name('obtener_tweets');
+
+Route::post('/descargar_tweets', 'TwitterController@descargarTweets')->name('descargar_tweets');
+
+Route::get('/configuracion', 'TwitterController@configuracion')->name('configuracion');
+
+Route::post('/guardar_configuracion', 'TwitterController@guardarConfiguracion')->name('guardar_configuracion');
+
