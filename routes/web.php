@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('/');
 
 Route::get('/obtener_tweets', 'TwitterController@obtenerTweets')->name('obtener_tweets');
 
@@ -23,3 +23,4 @@ Route::get('/configuracion', 'TwitterController@configuracion')->name('configura
 
 Route::post('/guardar_configuracion', 'TwitterController@guardarConfiguracion')->name('guardar_configuracion');
 
+Route::get('/consultar_tweets', 'TwitterController@consultarTweets')->name('consultar_tweets');

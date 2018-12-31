@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use \Twitter;
 use App\Tweet;
 use App\Configuration;
+use Redirect;
 
 /**
  * Description of TwitterController
@@ -44,8 +45,7 @@ class TwitterController  extends Controller{
             $tweetStorage->retweet_count = $tw->retweet_count;
             $tweetStorage->save();
         }
-        
-       return view('get_tweets', ['tweets' => $arrayTweets]);
+        return view('get_tweets', ['tweets' => $arrayTweets]);
     }
     
     public function configuracion() {
@@ -67,6 +67,9 @@ class TwitterController  extends Controller{
         return view('configuration', ['configs' => $configs, 'message' => $message]);
     }
     
+    public function consultarTweets() {
+        
+    }
     
     
     
