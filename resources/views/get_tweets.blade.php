@@ -1,6 +1,14 @@
 @extends('index')
 @section('content')
 
+@isset($msj)
+<div class="container">
+    <div class="alert alert-error">
+        {{ $msj }}
+    </div>
+</div>
+@endisset
+
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-body">
@@ -9,7 +17,7 @@
                 <div class="form-group row">
                     <label for="inputAccount" class="col-sm-2 col-form-label">Cuenta de Twitter</label>
                     <div class="col-sm-4">
-                        <input name="inputAccount" type="text" class="form-control" id="inputAccount" placeholder="Cuenta" >
+                        <input name="inputAccount" type="text" class="form-control" id="inputAccount" placeholder="Cuenta" required="">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Obtener Tweets</button>

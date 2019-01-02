@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('inicio');
 })->name('/');
 
 Route::get('/obtener_tweets', 'TwitterController@obtenerTweets')->name('obtener_tweets');

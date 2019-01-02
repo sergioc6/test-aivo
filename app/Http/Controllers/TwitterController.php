@@ -31,7 +31,7 @@ class TwitterController  extends Controller{
         $config = Configuration::find(1);
         
         $jsonTweets = Twitter::getUserTimeline(['screen_name' => $inputAccount, 'count' => $config->value, 'format' => 'json']);
-        
+
         $arrayTweets = json_decode($jsonTweets);
         
         foreach ($arrayTweets as $tw){
@@ -68,7 +68,9 @@ class TwitterController  extends Controller{
     }
     
     public function consultarTweets() {
+        $tweets = Tweet::paginate();
         
+        return view('consultar_tweets', ['tweets' => $tweets]);
     }
     
     
