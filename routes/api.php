@@ -34,6 +34,5 @@ Route::get('/get_tweets', function(){
         
         $array_result[] = $e;
     } 
-    dd($array_result);
     return json_encode($array_result);
 });

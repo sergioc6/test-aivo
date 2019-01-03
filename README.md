@@ -46,9 +46,24 @@ http://localhost/test-aivo/public/
 
 ### Ejecucion de la API
 Para ejecutar la API que obtiene los tweets, deberá ingresar a la siguiente url:
-http://localhost/test-aivo/public/api/get_tweets?twitter_account=<your-account>&count=<cantidad>&format=<format>
+http://localhost/test-aivo/public/api/get_tweets?twitter_account=manuginobili&count=20&format=json
 
 La misma acepta los siguientes parametros por GET:
-twitter_account -> your twitter account (default SCabral6)
-count -> numeric (default 20)
-format -> object|json|array default (json)
+
+| Parametros | valores |
+| ------ | ------ |
+| twitter_account | your twitter account (default SCabral6) |
+| count | numeric (default 20) |
+| format | object|json|array default (json) |
+
+
+### Ejecucion de los Unit Test
+Ejecutar en la consola el siguiente comando
+```sh
+phpunit --filter ApiTwitterTest
+```
+
+o en Wiindows 
+```sh
+.\vendor\bin\phpunit --filter ApiTwitterTest
+```
